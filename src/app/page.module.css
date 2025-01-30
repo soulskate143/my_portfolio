@@ -1,168 +1,94 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+.header {
+  font-family: var(--font-geist-sans), sans-serif;
+  background-color: #333;
+  padding: 0rem 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-transform: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
-.main {
+.nav {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  
+  margin: 0 auto;
+  width: 100%; /* Ensure full width */
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: inline-block;
+}
+
+.logo {
+  
+  padding-left: 0rem;
+  transition: transform 0.3s ease;
+}
+
+.logo2 {
+  border-radius: 50%;
+  padding-left: 0rem;
+  transition: transform 0.3s ease;
+  border: 15px solid rgb(107, 107, 107); /* Adds a grey border */
+  box-shadow: 20px 15px 20px rgba(0, 0, 0, 1); /* Adds a shadow */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
   margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+  padding: 0;
+  margin-left: auto; /* Push nav list to the right */
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
+.navItem {
+  margin-left: 2rem; /* Space between items */
+  font-size: 1.1rem;
   font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  text-transform: none;
+  transition: color 0.3s ease;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.navItem:hover {
+  color: #ff5722;
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
+.navList li:first-child {
+  margin-left: 0;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
+@media (max-width: 768px) {
+  .nav {
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+  .navList {
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 0; /* Remove left margin on smaller screens */
   }
 
-  a.secondary {
-    min-width: auto;
+  .navItem {
+    margin-left: 0;
+    margin-top: 1rem;
   }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+  .navItem:first-child {
+    margin-top: 0;
   }
 }
