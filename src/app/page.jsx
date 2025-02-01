@@ -1,24 +1,34 @@
 import Header from '../../Components/header';
-import styles from '../app/page.module.css'; 
+import styles from '../app/page.module.css';
 import Image from 'next/image';
 import Footer from '../../Components/footer';
+import About from '../../Components/about';
+import LogoHover from '../../Components/LogoHover';
 
 export default function Home() {
   return (
-    <div>
+    <main className={styles.container}>
       <Header />
+      
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroGlass}>
+        <LogoHover className={styles.logo2}/>
+          <h1 className={styles.title}>Building the Future of Web and IoT</h1>
+          <p className={styles.subtitle}>
+            As a versatile developer, I craft immersive, futuristic web experiences and innovative hardware IoT solutions.
+          </p>
+          <div className={styles.buttons}>
+            <a href="/projects" className={styles.button} aria-label="Explore My Work">Explore My Work</a>
+            <a href="/contact" className={styles.buttonOutline} aria-label="Get in Touch">Get in Touch</a>
+          </div>
+        </div>
+      </section>
 
-      <Image
-              className={styles.logo2}
-              src="/logo2.png"
-              alt="My Portfolio Logo"
-              width={200}
-              height={200}
-              unoptimized
-            />
-      <h1>Welcome to My Portfolio!</h1>
-      <p>I am a web developer, passionate about building modern, interactive applications.</p>
-    
-    </div>
+      <About /> {/* Use the About component */}
+
+      {/* Footer */}
+      <Footer />
+    </main>
   );
 }

@@ -1,10 +1,29 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../src/app/page.module.css'; // Import CSS module
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState, useRef } from "react";
+import styles from "../src/app/page.module.css";
 
 export default function Header() {
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0); // Use useRef to store last scroll position
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY.current) {
+        setVisible(false); // Hide on scroll down
+      } else {
+        setVisible(true); // Show on scroll up
+      }
+      lastScrollY.current = window.scrollY; // Update last scroll position
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${visible ? styles.visible : styles.hidden}`}>
       <nav className={styles.nav}>
         <div className={styles.branding}>
           <Link href="/" className={styles.logoLink}>

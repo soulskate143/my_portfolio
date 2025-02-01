@@ -1,0 +1,48 @@
+import styles from '../src/app/page.module.css';
+
+export default function About() {
+  return (
+    <section className={styles.about} id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a passionate developer specializing in crafting immersive, futuristic web experiences and innovative IoT solutions. With expertise in <strong>Next.js</strong>, <strong>React</strong>, <strong>Three.js</strong>, and <strong>IoT device programming</strong>, I bring ideas to life by blending cutting-edge technology with elegant design.
+      </p>
+
+      <h3>Work Experience</h3>
+      <div className={styles.experienceList}>
+        <div className={styles.experienceItem}>
+          <h4>Full-Stack Developer</h4>
+          <p className={styles.company}>Tech Innovators Inc.</p>
+          <p className={styles.duration}>Jan 2022 - Present</p>
+          <ul>
+            <li>Developed scalable web applications using Next.js and React, reducing load times by 30%.</li>
+            <li>Integrated Three.js for immersive 3D visualizations, enhancing user engagement.</li>
+            <li>Collaborated with cross-functional teams to deliver IoT solutions for smart home devices.</li>
+          </ul>
+        </div>
+
+        <div className={styles.experienceItem}>
+          <h4>IoT Developer</h4>
+          <p className={styles.company}>FutureTech Labs</p>
+          <p className={styles.duration}>Jun 2020 - Dec 2021</p>
+          <ul>
+            <li>Designed and implemented firmware for IoT devices, improving energy efficiency by 25%.</li>
+            <li>Built a real-time monitoring system using MQTT and Node.js for industrial IoT applications.</li>
+            <li>Optimized device communication protocols, reducing latency by 40%.</li>
+          </ul>
+        </div>
+
+        <div className={styles.experienceItem}>
+          <h4>Frontend Developer</h4>
+          <p className={styles.company}>WebCraft Studios</p>
+          <p className={styles.duration}>Mar 2018 - May 2020</p>
+          <ul>
+            <li>Created responsive and interactive user interfaces using React and CSS3.</li>
+            <li>Improved website performance by implementing lazy loading and code splitting.</li>
+            <li>Worked closely with designers to ensure pixel-perfect implementations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
