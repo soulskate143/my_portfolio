@@ -8,7 +8,38 @@ export default function About() {
         I’m a passionate developer specializing in crafting immersive, futuristic web experiences and innovative IoT solutions. With expertise in <strong>Next.js</strong>, <strong>React</strong>, <strong>Three.js</strong>, and <strong>IoT device programming</strong>, I bring ideas to life by blending cutting-edge technology with elegant design.
       </p>
 
-      <h3>Work Experience</h3>
+      
+      {/* Skills Section */}
+  
+      <section className={styles.skillsSection}>
+        <h2>My Skills</h2>
+        <div className={styles.skillItem} data-skill="HTML">
+          <label>HTML</label>
+          <progress value="90" max="100"></progress>
+        </div>
+        <div className={styles.skillItem} data-skill="CSS">
+          <label>CSS</label>
+          <progress value="85" max="100"></progress>
+        </div>
+        <div className={styles.skillItem} data-skill="JavaScript">
+          <label>JavaScript</label>
+          <progress value="80" max="100"></progress>
+        </div>
+        <div className={styles.skillItem} data-skill="React">
+          <label>React</label>
+          <progress value="75" max="100"></progress>
+        </div>
+        <div className={styles.skillItem} data-skill="Node.js">
+          <label>Node.js</label>
+          <progress value="70" max="100"></progress>
+        </div>
+        <div className={styles.skillItem} data-skill="Next.js">
+          <label>Next.js</label>
+          <progress value="85" max="100"></progress>
+        </div>
+      </section>
+
+      <h2>Work Experience</h2>
       <div className={styles.experienceList}>
         <div className={styles.experienceItem}>
           <h4>Full-Stack Developer</h4>
@@ -43,6 +74,7 @@ export default function About() {
           </ul>
         </div>
       </div>
+
     </section>
   );
 }

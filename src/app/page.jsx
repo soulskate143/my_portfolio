@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Footer from '../../Components/footer';
 import About from '../../Components/about';
 import LogoHover from '../../Components/LogoHover';
+import Projects from '../../Components/project';
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
         </div>
       </section>
 
-      <About /> {/* Use the About component */}
+      <About id="about"/>
+      <Projects id="projects"/> 
 
       {/* Footer */}
       <Footer />
