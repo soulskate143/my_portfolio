@@ -1,4 +1,4 @@
-import styles from '../src/app/page.module.css';
+import styles from '../app/page.module.css'
 
 export default function About() {
   return (
@@ -8,7 +8,6 @@ export default function About() {
         I’m a passionate developer specializing in crafting immersive, futuristic web experiences and innovative IoT solutions. With expertise in <strong>Next.js</strong>, <strong>React</strong>, <strong>Three.js</strong>, and <strong>IoT device programming</strong>, I bring ideas to life by blending cutting-edge technology with elegant design.
       </p>
 
-      
       {/* Skills Section */}
   
       <section className={styles.skillsSection}>

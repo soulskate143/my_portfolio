@@ -1,10 +1,10 @@
-import Header from '../../Components/header';
+import Header from '../Components/header';
 import styles from '../app/page.module.css';
 import Image from 'next/image';
-import Footer from '../../Components/footer';
-import About from '../../Components/about';
-import LogoHover from '../../Components/LogoHover';
-import Projects from '../../Components/project';
+import Footer from '../Components/footer';
+import About from '../Components/about';
+import LogoHover from '../Components/LogoHover';
+import Projects from '../Components/project';
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Tilt from "react-parallax-tilt";
-import styles from "../src/app/page.module.css"; // Adjust the path if needed
+import styles from '../app/page.module.css'
 
 const softwareProjects = [
   {

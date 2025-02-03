@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import styles from '../src/app/page.module.css'
+import styles from '../app/page.module.css'
 
 export default function LogoHover({ className }) {
   const [isHovered, setIsHovered] = useState(false);
