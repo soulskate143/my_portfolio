@@ -6,7 +6,7 @@ export default {
   },
   webpack(config) {
     // Add src to module resolution
-    config.resolve.modules.push(path.resolve('./src'));
+    config.resolve.modules.push(path.resolve('src'));
     return config;
   },
 };
